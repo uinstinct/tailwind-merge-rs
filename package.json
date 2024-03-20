@@ -4,7 +4,7 @@
   "description": "tailwind-merge implementation in rust",
   "main": "package.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node esbuild.js"
   },
   "author": "uinstinct",
   "license": "MIT",

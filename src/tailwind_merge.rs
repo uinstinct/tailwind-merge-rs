@@ -5,7 +5,7 @@ pub fn tw_merge(classes: String) -> String {
 mod inner {
     use wasm_bindgen::{prelude::wasm_bindgen, JsValue};
 
-    #[wasm_bindgen(module = "/src/package.js")]
+    #[wasm_bindgen(module = "/src/tailwind-merge.js")]
     extern "C" {
         #[wasm_bindgen(catch)]
         pub fn tw_merge(classes: String) -> Result<JsValue, JsValue>;
