@@ -1,5 +1,5 @@
 [package]
-name = "tailwind-merge-rs"
+name = "tailwind-merge"
 version = "0.1.0"
 edition = "2021"
 

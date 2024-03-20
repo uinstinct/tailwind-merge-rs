@@ -1,8 +1,8 @@
 #![cfg(target_arch = "wasm32")]
 
-extern crate tailwind_merge_rs;
+extern crate tailwind_merge;
 
-use tailwind_merge_rs::tw_merge;
+use tailwind_merge::tw_merge;
 use wasm_bindgen_test::*;
 
 wasm_bindgen_test_configure!(run_in_browser);
