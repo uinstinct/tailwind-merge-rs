@@ -1,0 +1,15 @@
+{
+  "name": "tailwind-merge-rs",
+  "version": "1.0.0",
+  "description": "tailwind-merge implementation in rust",
+  "main": "package.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "uinstinct",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.20.2",
+    "tailwind-merge": "^2.2.1"
+  }
+}
