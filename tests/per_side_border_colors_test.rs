@@ -10,11 +10,11 @@ wasm_bindgen_test_configure!(run_in_browser);
 #[wasm_bindgen_test]
 fn test_merges_classes_with_per_side_border_colors_correctly() {
     assert_eq!(
-        tw_merge(String::from("border-t-some-blue border-t-other-blue")),
+        tw_merge("border-t-some-blue border-t-other-blue"),
         "border-t-other-blue"
     );
     assert_eq!(
-        tw_merge(String::from("border-t-some-blue border-some-blue")),
+        tw_merge("border-t-some-blue border-some-blue"),
         "border-some-blue"
     );
 }

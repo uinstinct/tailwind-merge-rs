@@ -10,15 +10,15 @@ wasm_bindgen_test_configure!(run_in_browser);
 #[wasm_bindgen_test]
 fn test_merges_non_conflicting_classes_correctly() {
     assert_eq!(
-        tw_merge(String::from("border-t border-white/10")),
+        tw_merge("border-t border-white/10"),
         "border-t border-white/10"
     );
     assert_eq!(
-        tw_merge(String::from("border-t border-white")),
+        tw_merge("border-t border-white"),
         "border-t border-white"
     );
     assert_eq!(
-        tw_merge(String::from("text-3.5xl text-black")),
+        tw_merge("text-3.5xl text-black"),
         "text-3.5xl text-black"
     );
 }

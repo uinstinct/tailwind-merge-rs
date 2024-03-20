@@ -9,13 +9,13 @@ wasm_bindgen_test_configure!(run_in_browser);
 
 #[wasm_bindgen_test]
 fn test_handles_color_conflicts_properly() {
-    assert_eq!(tw_merge(String::from("bg-grey-5 bg-hotpink")), "bg-hotpink");
+    assert_eq!(tw_merge("bg-grey-5 bg-hotpink"), "bg-hotpink");
     assert_eq!(
-        tw_merge(String::from("hover:bg-grey-5 hover:bg-hotpink")),
+        tw_merge("hover:bg-grey-5 hover:bg-hotpink"),
         "hover:bg-hotpink"
     );
     assert_eq!(
-        tw_merge(String::from("stroke-[hsl(350_80%_0%)] stroke-[10px]")),
+        tw_merge("stroke-[hsl(350_80%_0%)] stroke-[10px]"),
         "stroke-[hsl(350_80%_0%)] stroke-[10px]"
     );
 }

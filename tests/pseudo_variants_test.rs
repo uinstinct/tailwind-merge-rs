@@ -9,13 +9,13 @@ wasm_bindgen_test_configure!(run_in_browser);
 
 #[wasm_bindgen_test]
 fn test_handles_pseudo_variants_conflicts_properly() {
-    assert_eq!(tw_merge(String::from("empty:p-2 empty:p-3")), "empty:p-3");
+    assert_eq!(tw_merge("empty:p-2 empty:p-3"), "empty:p-3");
     assert_eq!(
-        tw_merge(String::from("hover:empty:p-2 hover:empty:p-3")),
+        tw_merge("hover:empty:p-2 hover:empty:p-3"),
         "hover:empty:p-3"
     );
     assert_eq!(
-        tw_merge(String::from("read-only:p-2 read-only:p-3")),
+        tw_merge("read-only:p-2 read-only:p-3"),
         "read-only:p-3"
     );
 }
@@ -23,23 +23,23 @@ fn test_handles_pseudo_variants_conflicts_properly() {
 #[wasm_bindgen_test]
 fn test_handles_pseudo_variant_group_conflicts_properly() {
     assert_eq!(
-        tw_merge(String::from("group-empty:p-2 group-empty:p-3")),
+        tw_merge("group-empty:p-2 group-empty:p-3"),
         "group-empty:p-3"
     );
     assert_eq!(
-        tw_merge(String::from("peer-empty:p-2 peer-empty:p-3")),
+        tw_merge("peer-empty:p-2 peer-empty:p-3"),
         "peer-empty:p-3"
     );
     assert_eq!(
-        tw_merge(String::from("group-empty:p-2 peer-empty:p-3")),
+        tw_merge("group-empty:p-2 peer-empty:p-3"),
         "group-empty:p-2 peer-empty:p-3"
     );
     assert_eq!(
-        tw_merge(String::from("hover:group-empty:p-2 hover:group-empty:p-3")),
+        tw_merge("hover:group-empty:p-2 hover:group-empty:p-3"),
         "hover:group-empty:p-3"
     );
     assert_eq!(
-        tw_merge(String::from("group-read-only:p-2 group-read-only:p-3")),
+        tw_merge("group-read-only:p-2 group-read-only:p-3"),
         "group-read-only:p-3"
     );
 }

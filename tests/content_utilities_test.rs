@@ -10,9 +10,8 @@ wasm_bindgen_test_configure!(run_in_browser);
 #[wasm_bindgen_test]
 fn test_merges_content_utilities_correctly() {
     assert_eq!(
-        tw_merge(String::from(
-            "content-['hello'] content-[attr(data-content)]"
-        )),
+        tw_merge("content-['hello'] content-[attr(data-content)]"
+        ),
         "content-[attr(data-content)]"
     );
 }

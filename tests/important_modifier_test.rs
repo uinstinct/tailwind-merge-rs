@@ -10,19 +10,19 @@ wasm_bindgen_test_configure!(run_in_browser);
 #[wasm_bindgen_test]
 fn test_merges_tailwind_classes_with_important_modifier_correctly() {
     assert_eq!(
-        tw_merge(String::from("!font-medium !font-bold")),
+        tw_merge("!font-medium !font-bold"),
         "!font-bold"
     );
     assert_eq!(
-        tw_merge(String::from("!font-medium !font-bold font-thin")),
+        tw_merge("!font-medium !font-bold font-thin"),
         "!font-bold font-thin"
     );
     assert_eq!(
-        tw_merge(String::from("!right-2 !-inset-x-px")),
+        tw_merge("!right-2 !-inset-x-px"),
         "!-inset-x-px"
     );
     assert_eq!(
-        tw_merge(String::from("focus:!inline focus:!block")),
+        tw_merge("focus:!inline focus:!block"),
         "focus:!block"
     );
 }

@@ -1,4 +1,4 @@
-pub fn tw_merge(classes: String) -> String {
+pub fn tw_merge(classes: &str) -> String {
     inner::tw_merge(classes).unwrap().as_string().unwrap()
 }
 
@@ -8,7 +8,7 @@ mod inner {
     #[wasm_bindgen(module = "/src/tailwind-merge.js")]
     extern "C" {
         #[wasm_bindgen(catch)]
-        pub fn tw_merge(classes: String) -> Result<JsValue, JsValue>;
+        pub fn tw_merge(classes: &str) -> Result<JsValue, JsValue>;
     }
 }
 
