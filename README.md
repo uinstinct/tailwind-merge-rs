@@ -4,10 +4,10 @@ This is an implementation of the [tailwind-merge](https://github.com/dcastil/tai
 
 ## Installation
 
-ADd the following line in your `Cargo.toml` dependencies
+Add the following line in your `Cargo.toml` dependencies
 
 ```toml
-tailwind-merge = { git = "https://github.com/uinstinct/tailwind-merge" }
+tailwind-merge = { git = "https://github.com/uinstinct/tailwind-merge-rs.git" }
 ```
 
 ## Usage
